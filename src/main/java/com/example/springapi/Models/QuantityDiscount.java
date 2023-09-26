@@ -1,17 +1,14 @@
 package com.example.springapi.Models;
 
-import com.example.springapi.Interfaces.IDiscount;
+import com.example.springapi.Interfaces.Discount;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
-public class QuantityDiscount implements IDiscount {
+public class QuantityDiscount extends Discount {
     String discountId;
     int quantityForDiscount;
     int discountPrice;
 
     @Override
-    public int ApplyIDiscount(Product product, int quantity) {
+    public int applyDiscount(Product product, int quantity) {
         if (quantity < quantityForDiscount) {
             return quantity*product.price();
         }
