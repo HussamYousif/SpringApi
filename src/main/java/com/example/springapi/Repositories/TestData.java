@@ -7,7 +7,7 @@ import java.util.List;
 
 public class TestData {
 
-    public static List<Product> GetProducts() {
+    static List<Product> GetProducts() {
         var products = new ArrayList<Product>();
 
         // This could be generated.
@@ -22,7 +22,7 @@ public class TestData {
         products.add(new Product("009", "Bestseller book", 12));
         products.add(new Product("010", "Warm socks", 8));
         products.add(new Product("011", "Cool Axe", 8));
-        products.add(new Product("012", "Spanish Tomatoes",  200));
+        products.add(new Product("012", "Spanish Tomatoes", 200));
 
         return products;
     }
