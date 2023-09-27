@@ -5,11 +5,18 @@ import com.example.springapi.Models.Product;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TestData {
+public class ProductTestData {
 
     static List<Product> GetProducts() {
         var products = new ArrayList<Product>();
 
+        /*
+                productCatalog.put("0001", new Product("0001", "Rolex Watch", 1000, new Discount(3, 2000)));
+        productCatalog.put("0002", new Product("0002", "Michael Kors Purse", 80, new Discount(2, 120)));
+        productCatalog.put("0003", new Product("0003", "iPhone XS", 400, null));
+        productCatalog.put("0004", new Product("0004", "Casio Watch", 30, null));
+
+         */
         // This could be generated.
         products.add(new Product("001", "Jordan toothbrush", 26, "001"));
         products.add(new Product("002", "Norwegian potatoes", 5, "002"));
