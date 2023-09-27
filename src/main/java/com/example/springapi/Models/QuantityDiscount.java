@@ -21,7 +21,6 @@ public class QuantityDiscount extends DiscountBase {
         }
 
         int discounted = (quantity / quantityForDiscount) * discountPrice;
-        // TODO: test the modulus operator.
         int rest = (quantity % quantityForDiscount) * product.price() ;
 
         return discounted + rest;
