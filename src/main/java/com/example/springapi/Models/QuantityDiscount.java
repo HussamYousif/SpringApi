@@ -3,12 +3,21 @@ package com.example.springapi.Models;
 import com.example.springapi.Interfaces.Discount;
 
 public class QuantityDiscount extends Discount {
-    String discountId;
-    int quantityForDiscount;
-    int discountPrice;
+    private final int quantityForDiscount;
+    private final int discountPrice;
+
+    public QuantityDiscount(String discountId, int quantityForDiscount, int discountPrice) {
+        super(discountId);
+        this.quantityForDiscount = quantityForDiscount;
+        this.discountPrice = discountPrice;
+    }
+
+    public String getDiscountId() {
+        return discountId;
+    }
 
     @Override
-    public int applyDiscount(Product product, int quantity) {
+    public int getDiscountedPrice(Product product, int quantity) {
         if (quantity < quantityForDiscount) {
             return quantity*product.price();
         }
