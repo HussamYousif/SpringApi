@@ -1,7 +1,7 @@
 # About 
 
 ## Description
-This is a simple java springboot api that attempts to calculate the value of products given the product Id's. 
+This is a simple java springboot api that attempts to calculate the price of products.
 
 ## Prerequisites
 - [OpenJdk 21](https://www.oracle.com/java/technologies/downloads/): Java runtime. 
