@@ -1,6 +1,6 @@
 package com.example.springapi.Repositories;
 
-import com.example.springapi.Interfaces.Discount;
+import com.example.springapi.Models.DiscountBase;
 import com.example.springapi.Models.QuantityDiscount;
 
 import java.util.ArrayList;
@@ -8,8 +8,8 @@ import java.util.List;
 
 public class DiscountTestData {
 
-     static List<Discount> GetDiscounts() {
-        var discounts = new ArrayList<Discount>();
+     static List<DiscountBase> GetDiscounts() {
+        var discounts = new ArrayList<DiscountBase>();
 
         discounts.add(new QuantityDiscount("001", 2, 15));
         discounts.add(new QuantityDiscount("002", 5, 20));

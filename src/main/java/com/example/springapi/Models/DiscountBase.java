@@ -1,12 +1,12 @@
-package com.example.springapi.Interfaces;
+package com.example.springapi.Models;
 
 import com.example.springapi.Models.Product;
 
-public abstract class Discount {
+public abstract class DiscountBase {
 
     public String discountId;
 
-    public Discount(String discountId) {
+    public DiscountBase(String discountId) {
         this.discountId = discountId;
     }
 

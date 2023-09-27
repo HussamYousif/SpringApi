@@ -1,6 +1,6 @@
 package com.example.springapi.Services;
 
-import com.example.springapi.Interfaces.Discount;
+import com.example.springapi.Models.DiscountBase;
 import com.example.springapi.Interfaces.IDiscountRepository;
 import com.example.springapi.Interfaces.IProductRepository;
 import com.example.springapi.Interfaces.IPurchaseService;
@@ -54,7 +54,7 @@ public class PurchaseService implements IPurchaseService {
         var discountedPrice = 0;
         for (Product product : distinctElements) {
             var frequency = discountedProductsFrequency.get(product.productId());
-            Discount discount = discounts
+            DiscountBase discount = discounts
                 .stream()
                 .filter(d -> Objects.equals(d.discountId, product.discountId()))
                 .toList()

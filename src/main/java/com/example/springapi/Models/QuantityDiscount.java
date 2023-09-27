@@ -1,8 +1,6 @@
 package com.example.springapi.Models;
 
-import com.example.springapi.Interfaces.Discount;
-
-public class QuantityDiscount extends Discount {
+public class QuantityDiscount extends DiscountBase {
     private final int quantityForDiscount;
     private final int discountPrice;
 

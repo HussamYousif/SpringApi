@@ -26,10 +26,7 @@ public class ProductTestData {
         products.add(new Product("006", "Premium coffee", 35, "005"));
         products.add(new Product("007", "High-end laptop", 1000, null));
         products.add(new Product("008", "Comfortable chair", 75, "006"));
-        products.add(new Product("009", "Bestseller book", 12, null));
-        products.add(new Product("010", "Warm socks", 8, null));
-        products.add(new Product("011", "Cool Axe", 8, null));
-        products.add(new Product("012", "Spanish Tomatoes", 200, null));
+
 
         return products;
     }

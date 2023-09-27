@@ -116,4 +116,36 @@ public class PurchaseTest {
         assertEquals(86, actual, "Two discounted products should cost ");
     }
 
+    @Test
+    public void TestApplyABunchOfRandomThings() {
+        var input = new ArrayList<String>();
+        input.add("001");
+        input.add("001"); // 15
+
+        input.add("002"); // 5 = 20
+
+        input.add("003");
+        input.add("003");
+        input.add("003"); // 25 = 45
+
+        input.add("003"); // 10
+        input.add("003"); // 10 = 65
+
+
+
+        input.add("005"); // 20
+        input.add("005"); // 20
+        input.add("005"); // 20
+        input.add("005"); // 20
+        input.add("005"); // 20  165
+
+        input.add("004"); // 15
+
+
+
+        var actual = service.CalculatePurchasePrice(input);
+
+        assertEquals(180, actual, "Two discounted products should cost ");
+    }
+
 }
