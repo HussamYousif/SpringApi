@@ -6,13 +6,19 @@ import org.springframework.web.client.HttpClientErrorException;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class ProductRepository implements IProductRepository {
     public List<Product> GetProducts(List<String> productIds) throws HttpClientErrorException.NotFound {
         List<Product> results = new ArrayList<>();
 
         for (String id : productIds) {
-            var current = ProductTestData.GetProducts().stream().filter(p -> p.productId() == id).toList();
+            var current = ProductTestData
+                .GetProducts()
+                .stream()
+                .filter(p -> Objects.equals(p.productId(), id))
+                .toList();
+
             if (current.isEmpty()) {
                 throw new RuntimeException("ProductId not found: " + productIds + "!");
             }
